@@ -20,7 +20,7 @@
     "school": {
       "type": "hasAndBelongsToMany",
       "model": "School",
-      "foreignKey": "no",
+      "foreignKey": "",
       "options": {
         "nestRemoting": true
       }

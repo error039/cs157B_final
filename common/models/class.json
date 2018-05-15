@@ -16,7 +16,7 @@
     "department": {
       "type": "belongsTo",
       "model": "Department",
-      "foreignKey": "n",
+      "foreignKey": "",
       "options": {
         "nestRemoting": true
       }
@@ -24,7 +24,7 @@
     "professor": {
       "type": "belongsTo",
       "model": "Professor",
-      "foreignKey": "n",
+      "foreignKey": "",
       "options": {
         "nestRemoting": true
       }
