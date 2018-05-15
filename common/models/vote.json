@@ -1,0 +1,34 @@
+{
+  "name": "Vote",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "UserRating": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "noteBook": {
+      "type": "belongsTo",
+      "model": "NoteBook",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "users": {
+      "type": "belongsTo",
+      "model": "Users",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

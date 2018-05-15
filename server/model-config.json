@@ -38,5 +38,29 @@
   "School": {
     "dataSource": "db",
     "public": true
+  },
+  "Professor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Department": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Class": {
+    "dataSource": "db",
+    "public": true
+  },
+  "NoteBook": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Note": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Vote": {
+    "dataSource": "db",
+    "public": true
   }
 }

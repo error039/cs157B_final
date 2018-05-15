@@ -1,0 +1,31 @@
+{
+  "name": "Professor",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "FirstName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "school": {
+      "type": "hasAndBelongsToMany",
+      "model": "School",
+      "foreignKey": "no",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
