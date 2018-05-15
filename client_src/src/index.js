@@ -10,6 +10,8 @@ import App from './App';
 import history from './history';
 import Register from './components/Register';
 import registerServiceWorker from './registerServiceWorker';
+import Home from './Home';
+import List from './List';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
