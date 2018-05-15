@@ -9,6 +9,8 @@ import thunk from 'redux-thunk';
 import App from './App';
 import history from './history';
 import Register from './components/Register';
+import HomeLayout from './components/HomeLayout';
+import Dashboard from './components/Dashboard';
 import registerServiceWorker from './registerServiceWorker';
 import Home from './Home';
 import List from './List';
@@ -25,8 +27,9 @@ const Root = () => {
       <Provider store={store}>
         <Router history={history}>
           <Switch>
-            <Route exact path="/" component={App}/>
+            <Route exact path="/" component={HomeLayout}/>
             <Route path="/Register" component={Register}/>
+            <Route path="/Dashboard" component={Dashboard}/>
           </Switch>
         </Router>
       </Provider>

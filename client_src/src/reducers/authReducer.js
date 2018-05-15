@@ -1,12 +1,14 @@
 import { AUTH_USER,
          UNAUTH_USER,
          AUTH_ERROR,
+         REGISTER_ERROR,
        } from '../actions/types';
 import { status } from '../util/status';
 
 const INITIAL_STATE = {
   error: null,
   token: null,
+  register_error: null,
   fetching_user: false,
   user: null,
   fetch_user_error: null,
@@ -20,6 +22,8 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, token: null, user: null };
     case AUTH_ERROR:
       return { ...state, error: action.payload };
+    case REGISTER_ERROR:
+      return { ...state, register_error: action.payload };
     default:
       return state;
   }

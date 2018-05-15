@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signUp } from '../actions/index';
+import { login } from '../actions/index';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Container, Input, Form, Message } from 'semantic-ui-react';
@@ -7,9 +7,9 @@ import { store } from '../index';
 
 import '../styles/index.css';
 
-class Register extends Component {
+class Login extends Component {
   handleFormSubmit(formProps) {
-    this.props.signUp(formProps);
+    this.props.login(formProps);
   }
 
   componentWillUnmount() {
@@ -40,7 +40,7 @@ class Register extends Component {
     return (
       <div>
         <h2 className="card-title cardTitle px-2 pt-3">
-          Register
+          Login
         </h2>
         <Form
           className="justify-content-center position-relative"
@@ -57,14 +57,14 @@ class Register extends Component {
             className="form-control btn btn-primary mb-2"
             type="submit"
             disabled={submitting}>
-            Register
+            Login
           </button>
           <a
             className="btn btn-secondary form-control"
             style={{width: "100%"}}
-            href="/"
+            href="/register"
             role="button">
-            back
+            register
           </a>
       </Form>
       <Message negative hidden={errorMessage === null}>
@@ -75,9 +75,9 @@ class Register extends Component {
   }
 }
 
-Register = reduxForm({
-  form: 'register'
-})(Register);
+Login = reduxForm({
+  form: 'login'
+})(Login);
 
 function mapStateToProps(state) {
   return {
@@ -85,4 +85,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { signUp })(Register);
+export default connect(mapStateToProps, { login })(Login);
